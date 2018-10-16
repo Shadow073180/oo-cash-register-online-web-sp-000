@@ -17,8 +17,6 @@ class CashRegister
       @quantity.times do
         @item << item
       end
-    end
-
   end
 
 
