@@ -12,7 +12,7 @@ class CashRegister
 
 
   def add_item(title, price)
-    register = CashRegister.new(title, price)
+    register = CashRegister.new
     @total = @total + price
     @quantity = nil
 
