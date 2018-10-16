@@ -8,7 +8,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @item = []
-    
+
     end
 
   end
