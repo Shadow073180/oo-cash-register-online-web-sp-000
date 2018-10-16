@@ -21,7 +21,7 @@ class CashRegister
 
   def apply_discount
     if self.discount == nil
-      discount_message = "There is no discount to apply"
+      discount_message = "There is no discount to apply."
       return discount_message
     else
       @discount = @discount.to_f / 100
