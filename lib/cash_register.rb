@@ -10,7 +10,7 @@ class CashRegister
 
   end
 
-  def total(total)
+  def total
     @total = total.to_f
   end
 
