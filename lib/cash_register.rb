@@ -8,7 +8,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @item = []
-    if discount == 0 || discount == nil
+    if @discount == 0 || @discount == nil
       no_discount = "There is no discount to apply."
       returns no_discount
     end
