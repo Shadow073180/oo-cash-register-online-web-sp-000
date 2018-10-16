@@ -2,19 +2,19 @@ require 'pry'
 
 class CashRegister
 
-  attr_accessor :quantity, :price, :total, :title, :discount
+  attr_accessor :quantity, :price, :total, :title, :discount, :items
 
   def initialize(discount = nil)
     @total = 0
     @discount = discount
-    @item = []
+    @items = []
   end
 
 
   def add_item(item, price, quantity = 1)
     @total += (quantity * price)
       quantity.times do
-        @item << item
+        @items << item
       end
   end
 
@@ -28,7 +28,7 @@ class CashRegister
       discount_message = "After the discount, the total comes to $#{@total.to_i}."
       return discount_message
     elsif discount == nil
-      discount_message = "There was no discount to apply."
+      discount_message = "There is no discount to apply."
       return discount_message
     end
   end
