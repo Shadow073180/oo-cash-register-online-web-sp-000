@@ -12,10 +12,10 @@ class CashRegister
   end
 
 
-  def add_item(title, price)
+  def add_item(title, price, quantinty = nil)
     register = CashRegister.new
     @total = @total + price
-    @quantity = nil
+    @quantity = quantity
 
   end
 
