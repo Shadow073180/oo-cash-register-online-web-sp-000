@@ -8,9 +8,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @item = []
-    if @discount == 0 || @discount == nil
-      no_discount = "There is no discount to apply."
-      returns no_discount
+    
     end
 
   end
@@ -29,9 +27,13 @@ class CashRegister
     register = CashRegister.new(@discount)
     @discount = (total * @discount)
     @total = @total - @discount
-    discount_message = "After the discount, the total comes to $#{@total.to_i}."
-    return discount_message
-
+    if @discount > 0
+      discount_message = "After the discount, the total comes to $#{@total.to_i}."
+      return discount_message
+    elsif discount == nil
+      discount_message = "There was no discount to apply."
+      return discount_message
+    end
   end
 
 end
